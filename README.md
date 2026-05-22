@@ -2,6 +2,8 @@
 
 # Avatar raconte des blague aléatoire
 
+- This plugin is an add-on for the [A.V.A.T.A.R](https://avatar-home-automation.github.io/docs) framework.
+
 - les regle : raconte/donne moi une blague, ou une autre blague
 
    <table style="border: none;">
