@@ -4,7 +4,15 @@
 
 - This plugin is an add-on for the [A.V.A.T.A.R](https://avatar-home-automation.github.io/docs) framework.
 
-- les regle : raconte/donne moi une blague, ou une autre blague
+- les regle : raconte/donne moi une blague, ou une autre blague.
+
+## Multi-room
+
+The `Blague` plugin is fully multi-room.
+
+## Multi-language
+
+The `Blague` plugin relies solely on the system's available languages.
 
    <table style="border: none;">
   <tr>
