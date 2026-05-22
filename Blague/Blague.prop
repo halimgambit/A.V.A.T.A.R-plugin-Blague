@@ -1,0 +1,12 @@
+{
+	"modules": { 
+		"Blague": {
+			"version": "1.0",
+			"name": "joke",
+			"rules": {
+				"laugh": ["joke"]
+			}
+		}
+	}
+}
+			

@@ -1,0 +1,13 @@
+{
+  "plugin": {
+    "from": "from"
+  },
+
+  "speech": {
+    "laugh": "$$",
+    "errorApi": "Erreur lors du chargement de la blague",
+    "errorFormat": "Format de blague invalide",
+    "errorEmpty": "Aucune blague trouvée.",
+    "errorAccess": "Je n'arrive pas à accéder aux blagues en ce moment."
+  }
+}
