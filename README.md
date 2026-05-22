@@ -2,7 +2,7 @@
 
 # Avatar raconte des blague aléatoire
 
-- les regle raconte/donne moi une blague, ou une autre blague
+- les regle : raconte/donne moi une blague, ou une autre blague
 
    <table style="border: none;">
   <tr>
