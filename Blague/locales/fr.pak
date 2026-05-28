@@ -1,9 +1,5 @@
-{
-  "plugin": {
-    "from": "from"
-  },
-
-  "speech": {
+  {
+    "speech": {
     "laugh": "$$",
     "errorApi": "Erreur lors du chargement de la blague",
     "errorFormat": "Format de blague invalide",
