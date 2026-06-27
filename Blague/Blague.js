@@ -14,7 +14,7 @@ export async function action(data, callback) {
       laugh: () => laugh(data.client, L)
     };
 
-    info("Blague:", data.action.command, L.get("plugin.from"), data.client);
+    info("Blague:", data.action.command, "from", data.client);
 
     if (tblActions[data.action.command]) {
 			await tblActions[data.action.command]();
@@ -44,14 +44,11 @@ const laugh = async (client, L) => {
     if (!data?.blague || !data?.reponse) {
 			throw new Error(L.get("speech.errorFormat"));
 		}
+       const message = L.get(["speech.laugh", data.blague, data.reponse]);
 
-    const text = `${data.blague}. ${data.reponse}`;
+        info(message);
 
-    if (!text) {
-            throw new Error(L.get("speech.errorEmpty"));
-        }
-
-    Avatar.speak(L.get(["speech.laugh", text]), client, () => Avatar.Speech.end(client),);
+    Avatar.speak(message, client, () => Avatar.Speech.end(client),);
 
 	} catch (err) {
 		error(`Laugh Error: ${err.message}`);
