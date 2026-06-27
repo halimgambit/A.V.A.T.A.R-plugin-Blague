@@ -1,6 +1,6 @@
   {
     "speech": {
-    "laugh": "$$",
+    "laugh": "$$ ... $$",
     "errorApi": "Erreur lors du chargement de la blague",
     "errorFormat": "Format de blague invalide",
     "errorEmpty": "Aucune blague trouvée.",
