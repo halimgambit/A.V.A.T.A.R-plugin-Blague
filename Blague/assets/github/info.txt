@@ -1,1 +1,2 @@
-Avatar raconte des blague aléatoire
+Blague
+permet à A.V.A.T.A.R. de raconter des blagues directement à la voix. Profitez d'un large choix d'histoires drôles et de plaisanteries accessibles instantanément par commande vocale. Un plugin simple et amusant pour ajouter une touche de convivialité et de bonne humeur à votre assistant vocal.
