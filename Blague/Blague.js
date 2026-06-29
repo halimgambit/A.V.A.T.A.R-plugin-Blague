@@ -11,25 +11,26 @@ export async function action(data, callback) {
     const L = await Avatar.lang.getPak('Blague', data.language);
 
     const tblActions = {
-      laugh: () => laugh(data.client, L)
+      laugh: () => laugh(data.client, L, callback)
     };
 
     info("Blague:", data.action.command, "from", data.client);
 
     if (tblActions[data.action.command]) {
-			await tblActions[data.action.command]();
-		}
+                await tblActions[data.action.command]();
+            } else {
+                callback();
+            }
 
-  } catch (error) {
-        if (data.client) Avatar.Speech.end(data.client);
-        error("Blague Error:", error.message);
-    }
-
-  callback();
+	} catch (err) {
+		if (data.client) Avatar.Speech.end(data.client);
+		if (err.message) error(err.message);
+		callback();
+	}	
 }
 
 
-const laugh = async (client, L) => {
+const laugh = async (client, L, callback) => {
 
   try {
 
@@ -42,16 +43,20 @@ const laugh = async (client, L) => {
     const data = await response.json();
 
     if (!data?.blague || !data?.reponse) {
-			throw new Error(L.get("speech.errorFormat"));
+			throw new Error(L.get(["speech.errorFormat"]));
 		}
        const message = L.get(["speech.laugh", data.blague, data.reponse]);
 
         info(message);
 
-    Avatar.speak(message, client, () => Avatar.Speech.end(client),);
+    Avatar.speak(message, client, () => {
+      callback();
+    });
 
 	} catch (err) {
 		error(`Laugh Error: ${err.message}`);
-    Avatar.speak(L.get("speech.errorAccess"), client, () => Avatar.Speech.end(client));
+    Avatar.speak(L.get(["speech.errorAccess"]), client, () => {
+      callback();
+    });
 	}
 };
